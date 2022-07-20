@@ -1,0 +1,7 @@
+name: Cypress Tests #action name
+
+on: [push] #push new change
+
+jobs:
+  cypress-run:
+  
