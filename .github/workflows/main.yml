@@ -4,4 +4,14 @@ on: [push] #push new change
 
 jobs:
   cypress-run:
-  
+    runs-on: ubuntu-latest
+    steps:
+    -name: Checkout
+     uses: action/checkout@v2
+
+    -name: Cypress run
+     uses: cypress-io/github-action@v2
+     with:
+     build: npm run build
+     start: npm start
+
